@@ -1,0 +1,19 @@
+.footer {
+position: absolute;
+bottom: 0;
+width: 100%;
+background: black;
+height: 209px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+    &__text {
+        color: $white;
+        font-weight: 500;
+        font-size: 12px;
+        @include media-query(large) {
+            font-size: 24px;
+            }
+        }
+    }

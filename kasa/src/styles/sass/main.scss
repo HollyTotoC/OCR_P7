@@ -1,0 +1,24 @@
+// UTILS
+@import "./utils/variables";
+@import "./utils/mixins";
+
+
+// VENDORS
+
+//BASE
+@import "./base/base";
+@import "./base/typo";
+
+//COMPONENTS
+@import "./components/hero";
+@import "./components/thumb";
+
+//LAYOUTS
+@import "./layouts/footer";
+@import "./layouts/header";
+
+//PAGES
+@import "./pages/home";
+
+//THEMES
+
