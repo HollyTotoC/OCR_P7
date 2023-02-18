@@ -1,12 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react"
+import { Link } from "react-router-dom"
 
 function PageNotFound () {
     return (
         <div className="error">
             <div className="error__container">
-                <p className="error_code">404</p>
-                <p className="error_text">
+                <p className="error__code">404</p>
+                <p className="error__text">
                     Oups! La page que vous demandez n'existe pas.
                 </p>
             </div>
@@ -14,7 +14,7 @@ function PageNotFound () {
                 Retourner sur la page d’accueil
             </Link>
         </div>
-    );
+    )
 }
 
-export default PageNotFound;
+export default PageNotFound

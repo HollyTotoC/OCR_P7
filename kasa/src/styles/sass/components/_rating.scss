@@ -1,0 +1,8 @@
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &__icon {
+        height: 40px;
+    }
+}

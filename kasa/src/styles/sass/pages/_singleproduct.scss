@@ -1,0 +1,35 @@
+.singleproduct {
+    margin: 0 5%;
+    color: $primary-color;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    &__title {
+        margin: 0;
+        font-size: 36px;
+        font-weight: 500;
+    }
+    &__location{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    &__tag {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    &__idcard {
+        margin-top: 5px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        margin: 0;
+    }
+    &__dropdown {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 80px;
+    }
+}

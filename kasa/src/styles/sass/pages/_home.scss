@@ -1,6 +1,6 @@
 .home {
     margin: 0 5%;
-
+    margin-top: 63px; 
     &__products {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -9,5 +9,6 @@
         background: $light-grey;
         padding: 50px;
         border-radius: 25px;
+        margin-bottom: 25px;
         }
 }

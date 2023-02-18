@@ -1,0 +1,27 @@
+.host {
+    display: flex;
+    justify-content: flex-end ;
+    align-items: center;
+    &__name{
+        font-size: 18px;
+        font-weight: 500;
+        margin-right: 18px;
+        line-height: 142.6%;
+        color: $primary-color;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__firstname {
+        margin: 0;
+        text-align: end;
+    }
+    &__lastname {
+        margin: 0;
+        text-align: end;
+    }
+    &__img {
+        border-radius: 50%;
+        height: 64px;
+        width: 64px;
+    }
+}

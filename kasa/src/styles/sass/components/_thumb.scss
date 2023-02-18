@@ -9,6 +9,7 @@
         height: inherit;
         object-fit: cover;
         border-radius: inherit;
+        aspect-ratio: 1;
     }
     &__overlay {
         position: absolute;

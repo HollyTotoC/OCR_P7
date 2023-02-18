@@ -1,15 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react"
+import { Link } from "react-router-dom"
 
-import image from "../data/images/homeHero.png";
-import products from "../data/logements.json";
-import textContent from "../data/textContent.js";
-import Hero from "../components/Hero";
-import Thumb from "../components/Thumb.jsx";
+import image from "../data/images/homeHero.png"
+import products from "../data/logements.json"
+import textContent from "../data/textContent.js"
+import Hero from "../components/Hero"
+import Thumb from "../components/Thumb.jsx"
 
-const slogan = textContent.slogan;
+const slogan = textContent.slogan
 
-function productPage() {
+const productPage = () => {
     return (
         <div className="home">
             <div className="home__hero">
@@ -23,11 +23,11 @@ function productPage() {
                                 <Thumb image={product.cover} title={product.title} />
                             </Link>
                         </article>
-                    );
+                    )
                 })}
             </section>
         </div>
-    );
-};
+    )
+}
 
-export default productPage;
+export default productPage

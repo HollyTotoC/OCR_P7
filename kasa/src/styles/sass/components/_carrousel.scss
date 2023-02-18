@@ -1,0 +1,44 @@
+.slider {
+    position: relative;
+    height: 415px;
+    width: 100%;
+    overflow: hidden;
+    &__on {
+        height: inherit;
+        width: inherit;
+        transform: scale(1);
+        opacity: 1;
+        transition: transform 100ms, opacity 1000ms
+    }
+    &__off {
+        opacity: 50%;
+    }
+    &__img {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+    &__prev, &__next {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    &__next {
+        right: 0;
+        &--icon {
+            margin-right: 23px;
+        }
+    }
+    &__prev {
+        &--icon {
+            &--rotate {
+                margin-left: 23px;
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

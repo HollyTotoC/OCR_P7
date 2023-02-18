@@ -1,0 +1,16 @@
+.tag {
+    position: relative;
+    background: $primary-color;
+    border-radius: 10px;
+    color: $white;
+    padding: 2px 14px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    min-width: 68px;
+    text-align: center;
+    &__name {
+        margin: 0;
+        font-weight: 500;
+        font-size: 14px;
+    }
+}

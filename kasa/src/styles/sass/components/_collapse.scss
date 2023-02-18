@@ -1,0 +1,79 @@
+.collapse {
+    color: $white;
+    margin-bottom: 20px;
+
+    @for $i from 1 through 4 {
+        &:nth-of-type(#{$i}) {
+          $delay: 120ms * $i;
+          animation: show-up 600ms $delay both;
+          transform-origin: center;
+        }
+      }
+
+    &__button {
+        color: $light-grey;
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        background-color: $primary-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 52px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        font-size: 18px;
+        padding: 20px 13px;
+    }
+    &__arrow {
+        margin-right: 1rem;
+        pointer-events: none;
+        transform: rotate(180deg);
+        transition: transform 300ms;
+        translate: -50% -50%;
+        
+    }
+    &__content {
+        color: $primary-color;
+        background-color: $light-grey;
+        border-radius: 5px;
+        margin-top: -5px;
+        z-index: -1;
+        max-height: 0;
+        transition: max-height 250ms ease-out, padding 300ms ease-out;
+        overflow: hidden;
+        padding-left: 12px;
+      }
+      &__text {
+        margin: 0;
+        font-size: 18px;
+      }
+      &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+      }
+}
+
+.rotate {
+    transform: rotate(0deg);
+  }
+
+  .open {
+    max-height: 500px;
+    padding: 24px 12px 12px 12px;
+    transition: max-height 250ms ease-in-out, padding 300ms ease-in-out;
+  }
+
+  @keyframes reveal {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

@@ -2,24 +2,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2%;
-    padding-top: 20px;
-    @include media-query(large) {
-        margin: 5% 5%;
-        }
+    margin: 0% 5%;
+    padding-top: 40px;
    
     &__img {
-        height: 47px;
-        @include media-query(large) {
-            height: 68px;
-        }
+        height: 62px;
     }
     &__nav {
         display: flex;
-        width: 33%;
-        justify-content: space-around;
-        @include media-query(large) {
-            width: 33%;
-            }
+        width: 25%;
+        justify-content: space-between;
+        gap: 57px;
+    }
+    &__button {
+        width: 50%;
+        color: $primary-color;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 24px;
+        &.active {
+            text-decoration: underline;
+        }
     }
 }

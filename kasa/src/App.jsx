@@ -1,17 +1,17 @@
-import React from "react";
+import React from "react"
 import {BrowserRouter as Router, Route, Routes, Navigate,
-} from "react-router-dom";
-import "./styles/main.css";
+} from "react-router-dom"
+import "./styles/main.css"
 
 //React BrowserRouter
-import Home from "./pages/Home";
-import About from "./pages/About";
-import SingleProduct from "./pages/SingleProduct";
-import PageNotFound from "./pages/PageNotFound";
+import Home from "./pages/Home"
+import About from "./pages/About"
+import SingleProduct from "./pages/SingleProduct"
+import PageNotFound from "./pages/PageNotFound"
 
 //Fixed Component
-import Banner from "./components/Banner";
-import Footer from "./components/Footer";
+import Banner from "./components/Banner"
+import Footer from "./components/Footer"
 
 function App() {
     return (

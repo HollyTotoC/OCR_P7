@@ -4,30 +4,37 @@
     position: relative;
     border-radius: 25px;
     overeflow: hiden;
+    margin-bottom: 43px;
     &__img {
+
         width: inherit;
         height: inherit;
         border-radius: inherit;
         object-fit: cover;
         }
     &__overlay {
+
         position: absolute;
-        top: 0;
-        background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #0000004D;
         height: 100%;
         width: 100%;
         border-radius: inherit;
-        border: solid 1px red;
         }
     &__text {
+
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         box-sizing: inherit;
+        transform: translate(0,-18%);
         height: inherit;
+        width: inherit;
         font-size: 48px;
         font-weight: 500;
         color: $white;
-        border: solid 1px green;
         }
 }
