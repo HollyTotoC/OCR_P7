@@ -1,8 +1,13 @@
 .slider {
     position: relative;
-    height: 415px;
+    height: 255px;
     width: 100%;
     overflow: hidden;
+
+    @include media-query(xlarge) {
+        height: 415px;
+    }
+
     &__on {
         height: inherit;
         width: inherit;
@@ -13,12 +18,18 @@
     &__off {
         opacity: 50%;
     }
+
     &__img {
         width: inherit;
         height: inherit;
         object-fit: cover;
-        border-radius: 25px;
+        border-radius: 10px;
+        
+        @include media-query(large) {
+            border-radius: 25px;
+        }
     }
+
     &__prev, &__next {
         position: absolute;
         top: 0;
@@ -26,6 +37,13 @@
         display: flex;
         align-items: center;
         cursor: pointer;
+    }
+    &__prev--icon--rotate, &__next--icon {
+        height: 16px;
+        filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+        @include media-query(large) {
+            height: 50px;
+        }
     }
     &__next {
         right: 0;
@@ -41,4 +59,5 @@
             }
         }
     }
+
 }

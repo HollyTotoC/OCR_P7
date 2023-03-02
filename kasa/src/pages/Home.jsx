@@ -7,13 +7,14 @@ import textContent from "../data/textContent.js"
 import Hero from "../components/Hero"
 import Thumb from "../components/Thumb.jsx"
 
-const slogan = textContent.slogan
+const slogan1 = textContent.slogan1
+const slogan2 = textContent.slogan2
 
 const productPage = () => {
     return (
         <div className="home">
             <div className="home__hero">
-                <Hero image={image} slogan={slogan} />
+                <Hero image={image} slogan1={slogan1} slogan2={slogan2} />
             </div>
             <section className="home__products">
                 {products.map((product) => {

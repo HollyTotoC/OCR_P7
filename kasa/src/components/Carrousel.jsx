@@ -26,6 +26,10 @@ const Carrousel = ({ slides }) => {
         <div className="slider">
             {slides.map((picture, index) => {
                 const displayClass = index === current ? "slider__on" : "slider__off"
+
+
+                
+
                 return (
                     <div key={index} className={displayClass}>
                         {index === current && (

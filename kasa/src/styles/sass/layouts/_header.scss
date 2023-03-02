@@ -3,26 +3,42 @@
     justify-content: space-between;
     align-items: center;
     margin: 0% 5%;
-    padding-top: 40px;
-   
+    padding-top: 20px;
+    
+    @include media-query(large) {
+        padding-top: 40px;
+    }
+    
     &__img {
-        height: 62px;
+        height: 47px;
+        @include media-query(large) {
+            height: 62px; 
+        }
     }
     &__nav {
-        display: flex;
-        width: 25%;
-        justify-content: space-between;
-        gap: 57px;
-    }
-    &__button {
-        width: 50%;
-        color: $primary-color;
+        gap: 10px;       
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        
+        @include media-query(large) {
+            gap: 57px;
+        }
+    }
+    &__button {
+        color: $primary-color;
+        text-transform: uppercase;
         text-decoration: none;
         font-weight: 500;
-        font-size: 24px;
+        font-size: 12px;
+        line-height: 142.6%;
+        align-self: flex-end;
+                
+        @include media-query(large) {
+            text-transform: none;
+            font-size: 24px;
+        }
+        
         &.active {
             text-decoration: underline;
         }

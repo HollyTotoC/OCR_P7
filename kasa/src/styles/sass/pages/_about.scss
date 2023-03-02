@@ -1,12 +1,27 @@
 .about {
     margin: 0 5%;
-    margin-top: 44px;
-    margin-bottom: 50px;
+    margin-top: 17px;
+
+    @include media-query(large) {
+        margin-top: 44px; 
+    }
+
+    & .hero {
+        height: 223px !important;
+    }
     &__container {
-        margin: 0 10%;
+        text-align: auto;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 15px;
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
+        @include media-query(large) {
+            gap: 15px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+          }
     }
 }

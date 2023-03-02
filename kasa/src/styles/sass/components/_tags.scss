@@ -1,16 +1,27 @@
 .tag {
     position: relative;
     background: $primary-color;
-    border-radius: 10px;
+    border-radius: 5px;
     color: $white;
     padding: 2px 14px;
     margin-right: 10px;
     margin-bottom: 10px;
     min-width: 68px;
     text-align: center;
+
+    @include media-query(large) {
+        padding: 3px 10px;
+        border-radius: 10px;
+    }
+
     &__name {
         margin: 0;
         font-weight: 500;
-        font-size: 14px;
+        font-size: 10px;
+        line-height: 142.6%;
+
+        @include media-query(large) {
+            font-size: 14px;
+        }
     }
 }

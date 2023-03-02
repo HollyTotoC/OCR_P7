@@ -1,14 +1,28 @@
 .home {
     margin: 0 5%;
-    margin-top: 63px; 
+    margin-top: 16px; 
+
+    @include media-query(large) {
+        margin-top: 63px; 
+    }
+
     &__products {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 60px;
-        row-gap: 40px;
-        background: $light-grey;
-        padding: 50px;
-        border-radius: 25px;
         margin-bottom: 25px;
+        display: grid;
+        column-gap: 40px;
+        row-gap: 20px;
+
+        @include media-query(medium) {
+            grid-template-columns: repeat(2, 1fr);
         }
+        
+        @include media-query(large) {
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 50px;
+            row-gap: 40px;
+            background: $light-grey;
+            padding: 50px;
+            border-radius: 25px;
+        }
+    }
 }

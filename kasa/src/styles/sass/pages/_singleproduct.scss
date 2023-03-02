@@ -1,35 +1,62 @@
 .singleproduct {
     margin: 0 5%;
+    margin-top: 16px;
     color: $primary-color;
+
+    @include media-query(large) {
+        margin-top: 63px;
+    }
     &__container {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 15px;
+        margin-top: 20px;
+        
+        @include media-query(large){
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
     }
     &__title {
         margin: 0;
-        font-size: 36px;
         font-weight: 500;
+        font-size: 18px;
+        line-height: 142.6%;
+
+        @include media-query (large) {
+            font-size: 36px;
+        }
     }
     &__location{
-        font-size: 18px;
         font-weight: 500;
+        font-size: 14px;
+        line-height: 142.6%;
+
+        @include media-query (large) {
+            font-size: 18px;
+        }
     }
     &__tag {
         display: flex;
         flex-wrap: wrap;
       }
+
     &__idcard {
         margin-top: 5px;
         margin-bottom: 20px;
         display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-around;
-        margin: 0;
+        justify-content: space-between;
+        
+        @include media-query (large) {
+            flex-direction: column-reverse;
+            justify-content: space-around;
+            margin: 0;
+        }
     }
     &__dropdown {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 80px;
+        @include media-query(large) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 40px;
+            column-gap: 80px;
+        }
     }
 }

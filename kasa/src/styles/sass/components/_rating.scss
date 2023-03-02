@@ -3,6 +3,10 @@
     align-items: center;
     justify-content: flex-end;
     &__icon {
-        height: 40px;
+        margin-right: 2px;
+        height: 15px;
+        @include media-query(large) {
+            height: 30px;
+        }
     }
 }
