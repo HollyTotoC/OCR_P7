@@ -36,7 +36,7 @@ const Collapse = ({title, content}) => {
     return (
         <div className="collapse">
             <button type="button" className="collapse__button" onClick={toCollapse}>
-                {title}
+                <span className="collapse__text">{title}</span>
                 <img src={vector} alt="" className="collapse__arrow" />
             </button>
             <ContentSelector />

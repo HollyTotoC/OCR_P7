@@ -5,7 +5,10 @@
     &__icon {
         margin-right: 2px;
         height: 15px;
-        @include media-query(large) {
+        @include media-query(medium) {
+            height: 22px;
+        }
+        @include media-query(xlarge) {
             height: 30px;
         }
     }

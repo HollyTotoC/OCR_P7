@@ -17,17 +17,22 @@ function App() {
     return (
       <div>
         <div className="App">
-          <Router>
-            <Banner />
-            <Routes>
-              <Route index element={<Home />} />
-              <Route path="about" element={<About />} />
-              <Route path="products/:productId" element={<SingleProduct />} />
-              <Route path="/kaza" element={<Navigate to="/" replace />} />
-              <Route path="*" element={<PageNotFound />} />
-            </Routes>
-            <Footer />
-          </Router>
+          <div className="page">
+            <Router>
+              <div className="page__content">
+                <Banner />
+                <Routes>
+                  <Route index element={<Home />} />
+                  <Route path="about" element={<About />} />
+                  <Route path="products/:productId" element={<SingleProduct />} />
+                  <Route path="/kaza" element={<Navigate to="/" replace />} />
+                  <Route path="404" element={<PageNotFound />} />
+                  <Route path="*" element={<Navigate to="404" replace/>} />
+                </Routes>
+              </div>
+            </Router>
+          <Footer />
+          </div>
         </div>
       </div>
     ); 

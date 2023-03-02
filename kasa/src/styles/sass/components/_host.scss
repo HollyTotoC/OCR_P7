@@ -10,7 +10,12 @@
         margin-right: 10px;
         color: $primary-color;
         
-        @include media-query(large) {
+        @include media-query(medium) {
+            font-size: 14px;
+            flex-direction: column;
+            justify-content: center;
+        }
+        @include media-query(xlarge) {
             font-size: 18px;
             flex-direction: column;
             justify-content: center;
@@ -28,9 +33,13 @@
         border-radius: 50%;
         height: 32px;
         width: 32px;
-        @include media-query(large) {
+        @include media-query(medium) {
+            height: 48px;
+            width: 48px;
+        }
+        @include media-query(xlarge) {
             height: 64px;
             width: 64px;
-          }
+        }
     }
 }

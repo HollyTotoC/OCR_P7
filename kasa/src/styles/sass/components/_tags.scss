@@ -9,7 +9,11 @@
     min-width: 68px;
     text-align: center;
 
-    @include media-query(large) {
+    @include media-query(medium) {
+        padding: 2.5px 12px;
+        border-radius: 7px;
+    }
+    @include media-query(xlarge) {
         padding: 3px 10px;
         border-radius: 10px;
     }
@@ -20,7 +24,10 @@
         font-size: 10px;
         line-height: 142.6%;
 
-        @include media-query(large) {
+        @include media-query(medium) {
+            font-size: 12px;
+        }
+        @include media-query(xlarge) {
             font-size: 14px;
         }
     }

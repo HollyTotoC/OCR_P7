@@ -2,7 +2,10 @@
     margin: 0 5%;
     margin-top: 17px;
 
-    @include media-query(large) {
+    @include media-query(medium) {
+        margin-top: 24px; 
+    }
+    @include media-query(xlarge) {
         margin-top: 44px; 
     }
 
@@ -10,18 +13,21 @@
         height: 223px !important;
     }
     &__container {
-        text-align: auto;
+
         margin-left: auto;
         margin-right: auto;
         margin-top: 15px;
         display: flex;
         flex-direction: column;
         gap: 10px;
-        @include media-query(large) {
-            gap: 15px;
+        @include media-query(medium) {
+            gap: 7px;
             width: 90%;
             margin-left: auto;
             margin-right: auto;
-          }
+        }
+        @include media-query(xlarge) {
+            gap: 15px;
+        }
     }
 }

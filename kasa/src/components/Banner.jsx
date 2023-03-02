@@ -5,7 +5,7 @@ const Banner = ({ image, text }) => {
   return (
     <header className="banner">
       <NavLink to="/">
-        <img src={logo} alt="Logo" className="banner__img" />
+        <img src={logo} alt="" className="banner__img" />
       </NavLink>
       <nav className="banner__nav">
         <NavLink className="banner__button" to="/">

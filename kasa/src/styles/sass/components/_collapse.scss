@@ -1,38 +1,50 @@
 .collapse {
-    color: $white;
-    margin-bottom: 20px;
-    line-height: 142.6%;
+  color: $white;
+  margin-bottom: 20px;
+  line-height: 142.6%;
 
-    @for $i from 1 through 4 {
-        &:nth-of-type(#{$i}) {
-          $delay: 120ms * $i;
-          animation: reveal 600ms $delay both;
-          transform-origin: center;
-        }
+  @for $i from 1 through 4 {
+    &:nth-of-type(#{$i}) {
+      $delay: 120ms * $i;
+      animation: reveal 600ms $delay both;
+      transform-origin: center;
+    }
+  }
+
+  &__button {
+      color: $light-grey;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      background-color: $primary-color;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 30px;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+      padding: 20px 13px;
+      font-weight: 500;
+      
+      
+      @include media-query(medium) {
+        height: 38px;
       }
-
-    &__button {
-        color: $light-grey;
-        width: 100%;
-        border: none;
-        border-radius: 10px;
-        background-color: $primary-color;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 30px;
-        cursor: pointer;
-        position: relative;
-        z-index: 1;
-        padding: 20px 13px;
-        font-weight: 500;
-        font-size: 13px;
-
-
-        @include media-query(large) {
-          font-size: 24px;
-          height: 47px;
-        }
+      @include media-query(xlarge) {
+        height: 47px;
+      }
+    }
+    
+    &__text {
+      font-size: 13px;
+      
+      @include media-query(medium) {
+        font-size: 18px;
+      }
+      @include media-query(xlarge) {
+        font-size: 24px;
+      }
     }
 
     &__arrow {
@@ -42,7 +54,10 @@
         transition: transform 300ms;
         height: 9px;
         
-        @include media-query(large) {
+        @include media-query(medium) {
+          height: 11px;
+        }
+        @include media-query(xlarge) {
           height: 14px;
         }
         
@@ -70,7 +85,7 @@
         @include media-query(medium) {
           font-size: 14px;
         }
-        @include media-query(large) {
+        @include media-query(xlarge) {
           font-size: 18px;
         }
       }
@@ -85,7 +100,7 @@
         @include media-query(medium) {
           font-size: 14px;
         }
-        @include media-query(large) {
+        @include media-query(xlarge) {
           font-size: 18px;
         }
       }

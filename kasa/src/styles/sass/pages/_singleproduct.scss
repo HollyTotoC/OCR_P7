@@ -3,13 +3,17 @@
     margin-top: 16px;
     color: $primary-color;
 
-    @include media-query(large) {
+    @include media-query(medium) {
+        margin-top: 43px;
+    }
+    @include media-query(xlarge) {
         margin-top: 63px;
     }
     &__container {
         margin-top: 20px;
         
-        @include media-query(large){
+        @include media-query(medium){
+            margin-top: 10px;
             display: flex;
             justify-content: space-between;
             margin-bottom: 15px;
@@ -21,7 +25,10 @@
         font-size: 18px;
         line-height: 142.6%;
 
-        @include media-query (large) {
+        @include media-query (medium) {
+            font-size: 24px;
+        }
+        @include media-query (xlarge) {
             font-size: 36px;
         }
     }
@@ -30,7 +37,10 @@
         font-size: 14px;
         line-height: 142.6%;
 
-        @include media-query (large) {
+        @include media-query (medium) {
+            font-size: 16px;
+        }
+        @include media-query (xlarge) {
             font-size: 18px;
         }
     }
@@ -45,7 +55,7 @@
         display: flex;
         justify-content: space-between;
         
-        @include media-query (large) {
+        @include media-query (medium) {
             flex-direction: column-reverse;
             justify-content: space-around;
             margin: 0;
@@ -55,8 +65,10 @@
         @include media-query(large) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            column-gap: 40px;
-            column-gap: 80px;
+            column-gap: 50px;
+        }
+        @include media-query(xlarge) {
+            column-gap: 76px;
         }
     }
 }

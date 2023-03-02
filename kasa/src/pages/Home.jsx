@@ -3,20 +3,20 @@ import { Link } from "react-router-dom"
 
 import image from "../data/images/homeHero.png"
 import products from "../data/logements.json"
-import textContent from "../data/textContent.js"
+import textContent from "../data/textContent.json"
+
+
 import Hero from "../components/Hero"
 import Thumb from "../components/Thumb.jsx"
 
-const slogan1 = textContent.slogan1
-const slogan2 = textContent.slogan2
 
 const productPage = () => {
     return (
-        <div className="home">
+        <div className="home" role="main">
             <div className="home__hero">
-                <Hero image={image} slogan1={slogan1} slogan2={slogan2} />
+                <Hero image={image} slogan1={textContent.slogan[0]} slogan2={textContent.slogan[1]} />
             </div>
-            <section className="home__products">
+            <div className="home__products">
                 {products.map((product) => {
                     return (
                         <article key={product.id}>
@@ -26,7 +26,7 @@ const productPage = () => {
                         </article>
                     )
                 })}
-            </section>
+            </div>
         </div>
     )
 }

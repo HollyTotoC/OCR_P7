@@ -2,7 +2,10 @@
     margin: 0 5%;
     margin-top: 16px; 
 
-    @include media-query(large) {
+    @include media-query(medium) {
+        margin-top: 43px; 
+    }
+    @include media-query(xlarge) {
         margin-top: 63px; 
     }
 
@@ -11,18 +14,28 @@
         display: grid;
         column-gap: 40px;
         row-gap: 20px;
-
+        
         @include media-query(medium) {
             grid-template-columns: repeat(2, 1fr);
+            column-gap: 30px;
+            row-gap: 30px;
+            background: $light-grey;
+            padding: 40px;
+            border-radius: 25px;
         }
-        
         @include media-query(large) {
             grid-template-columns: repeat(3, 1fr);
-            column-gap: 50px;
-            row-gap: 40px;
+            column-gap: 20px;
+            row-gap: 20px;
             background: $light-grey;
-            padding: 50px;
+            padding: 40px;
             border-radius: 25px;
+        }
+        @include media-query(xlarge) {
+            padding: 50px;
+            row-gap: 40px;
+            column-gap: 50px;
+            
         }
     }
 }

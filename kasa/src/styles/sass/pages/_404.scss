@@ -14,9 +14,17 @@
         line-height: 142.6%;
         margin-top: 130px;
         margin-bottom: 0;
+        @include media-query(medium){
+            font-size: 160px;
+            margin-top: 200px;
+        }
         @include media-query(large){
+            font-size: 160px;
+            margin-top: 50px;
+        }
+        @include media-query(xlarge){
             font-size: 288px;
-            margin-top: 0;
+            margin-top: 70px;
         }
     }
 
@@ -26,7 +34,15 @@
         line-height: 142.6%;
         margin-top: 0;
         margin-bottom: 133px;
+        @include media-query(medium){
+            font-size: 24px;
+            margin-bottom: 182px;
+        }
         @include media-query(large){
+            font-size: 24px;
+            margin-bottom: 152px;
+        }
+        @include media-query(xlarge){
             font-size: 36px;
             margin-bottom: 182px;
         }
@@ -39,7 +55,10 @@
             font-size: 14px;
             line-height: 142.6%;
             text-decoration-line: underline;
-            @include media-query(large){
+            @include media-query(medium){
+                font-size: 18px;
+            }
+            @include media-query(xlarge){
                 font-size: 18px;
             }
         }

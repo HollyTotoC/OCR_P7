@@ -3,9 +3,9 @@ import { Link } from "react-router-dom"
 
 function PageNotFound () {
     return (
-        <div className="error">
+        <div className="error" role="main">
             <div className="error__container">
-                <p className="error__code">404</p>
+                <h1 className="error__code">404</h1>
                 <p className="error__text">
                     Oups! La page que vous demandez n'existe pas.
                 </p>
