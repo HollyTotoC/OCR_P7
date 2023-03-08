@@ -11,14 +11,14 @@ const Carrousel = ({ slides }) => {
         const next = () => {setCurrent(current === length - 1 ? 0 : current + 1)}
         const prev = () => {setCurrent(current === 0 ? length - 1 : current - 1)}
         return (
-            <div>
+            <>
                 <div className="slider__prev" onClick={prev}>
                     <img src={arrow} alt="" className="slider__prev--icon--rotate" />
                 </div>
                 <div className="slider__next" onClick={next}>
                     <img src={arrow} alt="" className="slider__next--icon" />
                 </div>
-            </div>
+            </>
         )
     }
 
