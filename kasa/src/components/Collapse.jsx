@@ -4,27 +4,37 @@ import vector from "../data/images/Vector.svg"
 
 const Collapse = ({title, content}) => {
     
+    // Collapse content selector
     const ContentSelector = () => {
         return (
             <>
-                {Array.isArray(content) ? (
-                    <ul className="collapse__list">
-                        {content.map((equipment, index) => (
-                            <li key={index} className="collapse__list-element">
-                                {equipment}
-                            </li>
-                        ))}
-                    </ul>
-                ) : (<p className="collapse__text">{content}</p>)}
+                {
+                    // Checking if the content is an array or not
+                    Array.isArray(content) ? (
+                        //If it's an array, we display the list of equipment
+                        <ul className="collapse__list">
+                            {content.map((equipment, index) => (
+                                <li key={index} className="collapse__list-element">
+                                    {equipment}
+                                </li>
+                            ))}
+                        </ul>
+                    ) : (
+                        //Else it's a simple string and we display the content
+                        <p className="collapse__text">{content}</p>
+                    )
+                }
             </>
         )
     } 
 
+    // Collapse logic
     const toCollapse = (e) => {
         const divContent = e.currentTarget.querySelector(".collapse__content")
         const iconContent = e.currentTarget.querySelector(".collapse__arrow")
         e.preventDefault();
         
+        //If the divContent as no .open class we add id with the rotation, else we remove the .rotate and .open class
         if (!divContent.classList.contains("open")) {
             divContent.classList.add("open")
             iconContent.classList.add("rotate")

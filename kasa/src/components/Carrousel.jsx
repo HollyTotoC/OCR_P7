@@ -7,9 +7,13 @@ const Carrousel = ({ slides }) => {
     const [current, setCurrent] = useState(0)
     const length = slides.length
 
+    // Slider arrow logic
     const Arrow = () => {
+        //Button logic
         const next = () => {setCurrent(current === length - 1 ? 0 : current + 1)}
         const prev = () => {setCurrent(current === 0 ? length - 1 : current - 1)}
+
+        
         return (
             <>
                 <div className="slider__prev" onClick={prev}>
@@ -22,14 +26,13 @@ const Carrousel = ({ slides }) => {
         )
     }
 
+    //Slider logic
     return (
         <div className="slider">
             {slides.map((picture, index) => {
+                //Logic that add/remove class to display the slides
                 const displayClass = index === current ? "slider__on" : "slider__off"
-
-
                 
-
                 return (
                     <div key={index} className={displayClass}>
                         {index === current && (
@@ -38,7 +41,10 @@ const Carrousel = ({ slides }) => {
                     </div>
                 )
             })}
-            {length > 1 ? <Arrow /> : null}
+            {
+            //Add the arrow if more than one picture
+                length > 1 ? <Arrow /> : null
+            }
         </div>
     )
 }

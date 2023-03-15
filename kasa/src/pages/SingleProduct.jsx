@@ -8,9 +8,11 @@ import Collapse from "../components/Collapse"
 import Carrousel from "../components/Carrousel"
 
 const SingleProduct = () => {
+    //we get the product id from url
     const { productId } = useParams()
     const product = products.find((product) => product.id === productId);
     
+    //we make sure that the product exist in the DB
     if (typeof product !== 'undefined') {
         const { title, location, rating, host, equipments, description, pictures } =
         product
@@ -38,6 +40,7 @@ const SingleProduct = () => {
             </div>
         )
     } else {
+        //If not in DB we redirect the user to the error page
         return (<Navigate to="/404" replace />)
     }
 }

@@ -14,6 +14,9 @@ import Banner from "./components/Banner"
 import Footer from "./components/Footer"
 
 function App() {
+
+  //App main display and routing logic
+  //We redirect everything that is not defined as an existing route to the 404 page
     return (
       <div>
         <div className="App">
@@ -22,10 +25,9 @@ function App() {
               <div className="page__content">
                 <Banner />
                 <Routes>
-                  <Route index element={<Home />} />
+                  <Route index element={<Home />} /> 
                   <Route path="about" element={<About />} />
                   <Route path="products/:productId" element={<SingleProduct />} />
-                  <Route path="/kaza" element={<Navigate to="/" replace />} />
                   <Route path="404" element={<PageNotFound />} />
                   <Route path="*" element={<Navigate to="404" replace/>} />
                 </Routes>
